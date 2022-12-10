@@ -1,0 +1,10 @@
+.aboutus{
+    margin: 1rem 0rem !important;
+    padding: 2rem !important;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+.aboutus >h2{
+    text-align: center;
+}
