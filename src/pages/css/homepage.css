@@ -8,13 +8,15 @@
     text-align: left;
 }
 .meetshort{
-    width: 30%;
+    margin-top: 5rem;
+    width: 40%;
 }
 .meetshort > h1{
     font-size: 3rem;
     font-weight: bolder !important;
 }
 .btn{
+    margin-top: 2rem;
     font-family: inherit;
     padding: 0.5rem 2rem;
     background-color: #ff5757;
