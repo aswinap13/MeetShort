@@ -4,7 +4,7 @@
     background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-    padding: 0px 4rem;
+    padding: 0px 4rem !important;
     text-align: left;
 }
 .meetshort{
@@ -23,6 +23,7 @@
     font-size: 1.3rem;
     border-radius: 20px;
     border: 0px solid;
+    cursor: pointer;
 }
 .btn > i {
     margin-left: 1rem;
