@@ -1,5 +1,5 @@
 .upload{
-    width: 25%;
+    width: 20%;
     height: 40%;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -9,6 +9,17 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: absolute;
     top: 25vh;
-    left: 35vw;
-    padding: 4rem;
+    left: 38vw;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.upload > img{
+    width: 200px;
+}
+.upload > input{
+    color: red;
 }
