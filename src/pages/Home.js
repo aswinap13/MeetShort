@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../App.css'
 import HomePage from './HomePage'
 import About from './About'
@@ -10,16 +10,17 @@ import Display from './Display'
 
 
 function Home() {
+  const [summary, setSummary] = useState();
+
+
   return (
     <div className='App'>
-
-    
-    <HomePage/>
+    <HomePage setSummary={setSummary}/>
     <div className='secnd'>
       <About/>
       <How/>
     </div>
-    <Display/>
+    <Display summary={summary}/>
   </div>
   )
 }

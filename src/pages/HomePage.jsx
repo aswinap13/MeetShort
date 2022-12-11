@@ -4,7 +4,8 @@ import Upload from './Upload';
 import './css/homepage.css'
 
 
-function HomePage() {
+function HomePage(props) {
+  const setSummary = props.setSummary;
 
   const [visible, setVisible] = useState(true);
   return (
@@ -15,7 +16,7 @@ function HomePage() {
             <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
             <button className='btn' onClick={() => setVisible(!visible)}>Get Started<i class='fas fa-angle-double-right'></i></button>
         </div>
-        {!visible && <Upload setVisible={setVisible} visible={visible} />}
+        {!visible && <Upload setVisible={setVisible} visible={visible} setSummary={setSummary}/>}
         
     </div>
   )
