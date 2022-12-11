@@ -5,6 +5,7 @@ import About from './About'
 import How from './How'
 
 import './css/home.css'
+import Display from './Display'
 
 
 
@@ -17,7 +18,8 @@ function Home() {
     <div className='secnd'>
       <About/>
       <How/>
-      </div>
+    </div>
+    <Display/>
   </div>
   )
 }
