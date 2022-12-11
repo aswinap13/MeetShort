@@ -1,19 +1,14 @@
 import React from 'react'
 import './css/display.css'
 
-function Display() {
+function Display(props) {
+  const summary=props.summary;
   return (
     <div className='display'>
-        <h3>Summary</h3>
+        <h3>Transcript</h3>
         <div className='asr'>
             <div >
-                <h4>Speaker 1</h4>
-            </div>
-            <div >
-                <h4>Speaker 1</h4>
-            </div>
-            <div >
-                <h4>Speaker 1</h4>
+                <p className='transcript'>{summary}</p>
             </div>
         </div>
     </div>
