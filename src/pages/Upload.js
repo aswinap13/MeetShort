@@ -7,6 +7,7 @@ function Upload(props) {
   const visible=props.visible;
 
   const [file, setFile] = useState();
+  const [numspeakers, setNumspeakers] = useState(0);
   const [error, setError] = useState(null);
   const setSummary=props.setSummary;
 
@@ -19,7 +20,7 @@ function Upload(props) {
 
     const formData = new FormData();
     formData.append('audio', file);
-    formData.append('num_speakers', 0);
+    formData.append('num_speakers', numspeakers);
     
     const options = { 
       method: 'post',
@@ -39,7 +40,7 @@ function Upload(props) {
     }).then(d => {
       setVisible(false)
       alert(`Summary Generated !!`)
-      // scroll to bottom
+      document.getElementById('displaySummary').scrollIntoView({ behavior: 'smooth' });
       setError(null)
       setSummary(d.transcript)
     }).catch(err => {
@@ -64,7 +65,7 @@ function Upload(props) {
 
         <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/><label className='spkrinput'>
          Number of Speakers :
-          <input size={1} type="text" name="name" />
+          <input size={1} type="text" name="numspeakers" onChange={(e) => setNumspeakers(e.target.value)}/>
         </label>
 
         <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>
