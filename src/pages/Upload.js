@@ -7,7 +7,7 @@ function Upload() {
       <div className='upload'>
         <p>Upload File</p>
         <img src={require('../assets/removed.png')} alt='bg' />
-        <input type="file" value="" />
+        <input type="file" value="file"  />
       </div>
   )
 }
