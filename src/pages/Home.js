@@ -14,7 +14,6 @@ import Display from './Display'
 function Home() {
   const [summary, setSummary] = useState();
 
-
   return (
     <div className='App'>
     <HomePage setSummary={setSummary}/>
