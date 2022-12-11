@@ -70,10 +70,8 @@ function Upload(props) {
         <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>
         {error && <p className='error'>{ error }</p>}
         <button onClick={() => setVisible(!visible)} className='close'>Close</button>
+        
       </div>
-
-// https://bosctechlabs.com/scroll-to-an-element-in-react/#Scroll_to_an_Element_With_the_React_Refs_References
-
 
 
   )
