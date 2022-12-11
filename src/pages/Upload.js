@@ -58,13 +58,24 @@ function Upload(props) {
 
   return (
       <div className='upload'>
-        <p>Upload Your File</p>
+        <h2>Upload Your File</h2>
         <img src={require('../assets/removed.png')} alt='bg' />
-        <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/>
+        
+
+        <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/><label className='spkrinput'>
+         Number of Speakers :
+          <input size={1} type="text" name="name" />
+        </label>
+
         <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>
         {error && <p className='error'>{ error }</p>}
         <button onClick={() => setVisible(!visible)} className='close'>Close</button>
       </div>
+
+// https://bosctechlabs.com/scroll-to-an-element-in-react/#Scroll_to_an_Element_With_the_React_Refs_References
+
+
+
   )
 }
 
