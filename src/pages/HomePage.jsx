@@ -12,8 +12,8 @@ function HomePage(props) {
     <div className='homepage'>
       <NavigationBar/>
         <div className="meetshort">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+            <h1>Meeting Summarizer</h1>
+            <p>Summarize and minute your business in one click.Summarize and minute your business in one click.Summarize and minute your business in one click. </p>
             <button className='btn' onClick={() => setVisible(!visible)}>Get Started<i class='fas fa-angle-double-right'></i></button>
         </div>
         {!visible && <Upload setVisible={setVisible} visible={visible} setSummary={setSummary}/>}
