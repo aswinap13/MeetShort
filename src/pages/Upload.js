@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './css/upload.css'
-
+import { ThreeDots } from  'react-loader-spinner'
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function Upload(props) {
   const setVisible=props.setVisible;
@@ -9,6 +10,7 @@ function Upload(props) {
   const [file, setFile] = useState();
   const [numspeakers, setNumspeakers] = useState(0);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const setSummary=props.setSummary;
 
   const changeHandler = (event) => {
@@ -17,6 +19,7 @@ function Upload(props) {
 
   const submitAudio = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const formData = new FormData();
     formData.append('audio', file);
@@ -38,13 +41,14 @@ function Upload(props) {
         return response.json().then(text => {throw text})
       }
     }).then(d => {
+      setLoading(false)
       setVisible(false)
       alert(`Summary Generated !!`)
       document.getElementById('displaySummary').scrollIntoView({ behavior: 'smooth' });
       setError(null)
       setSummary(d.transcript)
     }).catch(err => {
-        console.log(err)
+        setLoading(false)
         if (err.Error === "RuntimeError") {
           setError('Audio file is of invalid format !!')
         } else if (err.Message) {
@@ -68,7 +72,17 @@ function Upload(props) {
           <input size={1} type="text" name="numspeakers" onChange={(e) => setNumspeakers(e.target.value)}/>
         </label>
 
-        <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>
+        {loading === false && <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>}
+        {loading === true && <ThreeDots 
+                                height="80" 
+                                width="80" 
+                                radius="9"
+                                color="#E64830" 
+                                ariaLabel="three-dots-loading"
+                                wrapperStyle={{}}
+                                wrapperClassName=""
+                                visible={true}
+                                />}
         {error && <p className='error'>{ error }</p>}
         <button onClick={() => setVisible(!visible)} className='close'>Close</button>
         
