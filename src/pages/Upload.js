@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import './css/upload.css'
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './css/upload.css'
 import { ThreeDots } from  'react-loader-spinner'
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 function Upload(props) {
   const setVisible=props.setVisible;
@@ -70,6 +75,16 @@ function Upload(props) {
         <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/><label className='spkrinput'>
          Number of Speakers :
           <input size={1} type="text" name="numspeakers" onChange={(e) => setNumspeakers(e.target.value)}/>
+        </label>
+         {/* SPEAKER IDENTIFICATION SWITCH */}
+         <label className='checkbox'>
+          <Form>
+            <Form.Check 
+              type="switch"
+              id="custom-switch"
+              label="Speaker Identification"
+            />
+          </Form>
         </label>
 
         {loading === false && <button className='upbtn' type="button" onClick={submitAudio}>Submit</button>}

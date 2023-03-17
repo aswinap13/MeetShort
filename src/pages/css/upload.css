@@ -8,7 +8,7 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     left: 35vw;
     padding: 1rem;
     padding-top: 0 !important;
@@ -45,6 +45,13 @@
     border: none;
     border-radius: 5px;
 }
+#checkboxer{
+    width: 10%;
+    padding: 0rem !important;
+
+    margin: 0rem !important;
+}
+
 ::-webkit-file-upload-button {
     width: 50%;  
     font-family: 'Poppins', sans-serif;
