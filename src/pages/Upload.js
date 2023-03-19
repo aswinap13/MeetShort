@@ -16,6 +16,7 @@ function Upload(props) {
   const [numspeakers, setNumspeakers] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [useSI, setUseSI] = useState(false);
   const setSummary=props.setSummary;
 
   const changeHandler = (event) => {
@@ -29,6 +30,7 @@ function Upload(props) {
     const formData = new FormData();
     formData.append('audio', file);
     formData.append('num_speakers', numspeakers);
+    formData.append('use_si', useSI);
     
     const options = { 
       method: 'post',
@@ -83,6 +85,7 @@ function Upload(props) {
               type="switch"
               id="custom-switch"
               label="Speaker Identification"
+              onClick={(e) => setUseSI(!useSI)}
             />
           </Form>
         </label>
