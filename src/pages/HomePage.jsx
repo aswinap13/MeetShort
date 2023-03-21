@@ -5,7 +5,8 @@ import './css/homepage.css'
 
 
 function HomePage(props) {
-  const setSummary = props.setSummary;
+  const setEsummary = props.setEsummary;
+  const setTranscript = props.setTranscript;
 
   const [visible, setVisible] = useState(true);
   return (
@@ -13,10 +14,10 @@ function HomePage(props) {
       <NavigationBar/>
         <div className="meetshort">
             <h1>Meeting Summarizer</h1>
-            <p>Summarize and minute your business in one click.Summarize and minute your business in one click.Summarize and minute your business in one click. </p>
+            <p>Summarize you meetings in one click. Just provide the audio of your meeting. Then wait and watch the magic.</p>
             <button className='btn-start' onClick={() => setVisible(!visible)}>Get Started<i class='fas fa-angle-double-right'></i></button>
         </div>
-        {!visible && <Upload setVisible={setVisible} visible={visible} setSummary={setSummary}/>}
+        {!visible && <Upload setVisible={setVisible} visible={visible} setEsummary={setEsummary} setTranscript={setTranscript}/>}
         
     </div>
   )

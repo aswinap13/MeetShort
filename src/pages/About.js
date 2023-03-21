@@ -4,8 +4,7 @@ function About() {
   return (
     <div className='aboutus'>
       <h2>About Us</h2>
-      <p>hey there, this is a sampke text to test the about page.hey there, 
-        this is a sampke text to test the about page.hey there, this is a sampke text to test the about page.</p>
+      <p>We are 4th year BTECH students from College of Engineering Trivandrum. Our team consists of Fausan Asharaf, Aswin AP, Bayan K and Muhammed Fazil.</p>
     </div>
   )
 }

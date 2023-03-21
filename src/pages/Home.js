@@ -12,16 +12,17 @@ import Display from './Display'
 
 
 function Home() {
-  const [summary, setSummary] = useState();
+  const [transcript, setTranscript] = useState();
+  const [esummary, setEsummary] = useState({});
 
   return (
     <div className='App'>
-    <HomePage setSummary={setSummary}/>
+    <HomePage setEsummary={setEsummary} setTranscript={setTranscript}/>
     <div className='secnd'>
       <About/>
       <How/>
     </div>
-    <Display summary={summary}/>
+    <Display esummary={esummary} transcript={transcript}/>
   </div>
   )
 }

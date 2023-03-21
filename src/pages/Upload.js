@@ -9,15 +9,17 @@ import { ThreeDots } from  'react-loader-spinner'
 
 
 function Upload(props) {
-  const setVisible=props.setVisible;
-  const visible=props.visible;
+  const setVisible = props.setVisible;
+  const visible = props.visible;
 
   const [file, setFile] = useState();
   const [numspeakers, setNumspeakers] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [useSI, setUseSI] = useState(false);
-  const setSummary=props.setSummary;
+  
+  const setEsummary = props.setEsummary;
+  const setTranscript = props.setTranscript;
 
   const changeHandler = (event) => {
     setFile(event.target.files[0]);
@@ -53,7 +55,8 @@ function Upload(props) {
       alert(`Summary Generated !!`)
       document.getElementById('displaySummary').scrollIntoView({ behavior: 'smooth' });
       setError(null)
-      setSummary(d.transcript)
+      setTranscript(d.transcript)
+      setEsummary(d.esummary)
     }).catch(err => {
         setLoading(false)
         if (err.Error === "RuntimeError") {
