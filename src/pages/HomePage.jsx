@@ -14,7 +14,7 @@ function HomePage(props) {
       <NavigationBar/>
         <div className="meetshort">
             <h1>Meeting Summarizer</h1>
-            <p>Summarize you meetings in one click. Just provide the audio of your meeting. Then wait and watch the magic.</p>
+            <p>Summarize you meetings in one click. Just provide the audio of your meeting and number of speakers (optional). Then wait and watch the magic. You can get transcript and 2 types of summaries from the audio.</p>
             <button className='btn-start' onClick={() => setVisible(!visible)}>Get Started<i class='fas fa-angle-double-right'></i></button>
         </div>
         {!visible && <Upload setVisible={setVisible} visible={visible} setEsummary={setEsummary} setTranscript={setTranscript}/>}
