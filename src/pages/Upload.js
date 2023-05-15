@@ -18,6 +18,7 @@ function Upload(props) {
   const [loading, setLoading] = useState(false);
   const [useSI, setUseSI] = useState(false);
   
+  const setAsummary = props.setAsummary;
   const setEsummary = props.setEsummary;
   const setTranscript = props.setTranscript;
 
@@ -57,6 +58,7 @@ function Upload(props) {
       setError(null)
       setTranscript(d.transcript)
       setEsummary(d.esummary)
+      setAsummary(d.asummary)
     }).catch(err => {
         setLoading(false)
         if (err.Error === "RuntimeError") {
