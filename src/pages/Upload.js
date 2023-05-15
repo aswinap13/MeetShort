@@ -77,7 +77,8 @@ function Upload(props) {
         <img src={require('../assets/removed.png')} alt='bg' />
         
 
-        <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/><label className='spkrinput'>
+        <input className='input' type="file" name="file" accept="audio/wav" onChange={changeHandler}/>
+        <label className='spkrinput'>
          Number of Speakers :
           <input size={1} type="text" name="numspeakers" onChange={(e) => setNumspeakers(e.target.value)}/>
         </label>

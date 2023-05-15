@@ -48,7 +48,6 @@
 #checkboxer{
     width: 10%;
     padding: 0rem !important;
-
     margin: 0rem !important;
 }
 
@@ -87,4 +86,16 @@
     color: red;
     font-size: medium;
     margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 580px) {
+    .upload{
+        width: 90%;
+        height: 70%;
+        left: 4vw;
+    }
+    .input{
+        font-size: 12px;
+    }
+
 }

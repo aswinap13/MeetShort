@@ -19,3 +19,23 @@ h2{
 .howcontent > p{
     margin: 0rem 2rem;
 }
+
+@media only screen and (max-width: 580px) {
+
+    .how{
+        visibility:hidden;
+        padding: 2rem !important;
+        width: 150% !important;
+        margin:1rem -2.5rem 1rem -2.5rem !important;
+    }
+    .howcontent{
+        display: flex;
+        flex-direction: column;
+    }
+    .howcontent > h2{        
+        font-size: 1.5rem;
+    }
+    .howcontent > p{
+        font-size: 1rem;
+    }
+}

@@ -34,3 +34,21 @@
 .btn-start:hover{
     background-color: #fa2020;
 }
+
+@media only screen and (max-width: 580px) {
+    .meetshort{
+        width:100% !important;
+        overflow: hidden;
+    }
+    .homepage{
+        padding: 0rem 1rem !important;
+    }
+    .meetshort > h1{
+        font-size: 1rem;
+        font-weight: bolder !important;
+    }
+    .meetshort{
+        text-align: center;
+    }
+
+  }
