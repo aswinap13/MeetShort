@@ -5,6 +5,7 @@ import './css/homepage.css'
 
 
 function HomePage(props) {
+  const setAsummary = props.setAsummary;
   const setEsummary = props.setEsummary;
   const setTranscript = props.setTranscript;
 
@@ -17,7 +18,7 @@ function HomePage(props) {
             <p>Summarize you meetings in one click. Just provide the audio of your meeting and number of speakers (optional). Then wait and watch the magic. You can get transcript and 2 types of summaries from the audio.</p>
             <button className='btn-start' onClick={() => setVisible(!visible)}>Get Started<i class='fas fa-angle-double-right'></i></button>
         </div>
-        {!visible && <Upload setVisible={setVisible} visible={visible} setEsummary={setEsummary} setTranscript={setTranscript}/>}
+        {!visible && <Upload setVisible={setVisible} visible={visible} setAsummary={setAsummary} setEsummary={setEsummary} setTranscript={setTranscript}/>}
         
     </div>
   )
